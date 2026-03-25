@@ -1,4 +1,4 @@
-/* --- RESET E BÁSICO (Mantenha o que já tinha) --- */
+/* --- RESET E BÁSICO --- */
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +11,7 @@ body {
     color: #0f0f0f;
 }
 
-/* --- HEADER (Mantenha o que já tinha) --- */
+/* --- HEADER  --- */
 header {
     display: flex;
     align-items: center;
