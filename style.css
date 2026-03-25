@@ -1,0 +1,218 @@
+/* --- RESET E BÁSICO (Mantenha o que já tinha) --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Roboto, Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #0f0f0f;
+}
+
+/* --- HEADER (Mantenha o que já tinha) --- */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    height: 56px;
+    background-color: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    gap: 20px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.logo img {
+    height: 20px;
+    cursor: pointer;
+}
+
+.pesquisa-container {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    max-width: 720px;
+}
+
+.pesquisa-container input {
+    width: 100%;
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+    border-radius: 40px 0 0 40px;
+    outline: none;
+    font-size: 16px;
+}
+
+.pesquisa-container button {
+    padding: 0 20px;
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    border-left: none;
+    border-radius: 0 40px 40px 0;
+    cursor: pointer;
+}
+
+.btn-login {
+    background: none;
+    border: 1px solid #065fd4;
+    color: #065fd4;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+/* --- CORPO DO SITE (LAYOUT DE COLUNAS) --- */
+.container-principal {
+    display: flex;
+    max-width: 1280px;
+    margin: 24px auto;
+    padding: 0 24px;
+    gap: 24px;
+}
+
+.coluna-video {
+    flex: 2.5;
+}
+
+.player-container {
+    width: 100%;
+    position: relative;
+    background-color: #000;
+}
+
+.imagem-video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.botao-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 60px;
+    color: white;
+    background: rgba(0,0,0,0.6);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* --- NOVA SEÇÃO: ESTILO DA BARRA DE AÇÕES DO VÍDEO --- */
+.barra-acoes-video {
+    display: flex;
+    justify-content: space-between; /* Separa esquerda da direita */
+    align-items: center;
+    padding: 12px 0;
+    margin-top: 8px;
+    border-bottom: 1px solid #e5e5e5; /* Linha sutil embaixo */
+}
+
+.acoes-esquerda {
+    display: flex;
+    gap: 8px; /* Espaço entre curtir, compartilhar, etc. */
+}
+
+/* Botões cinzas arredondados (Curtir, Compartilhar) */
+.btn-acao {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background-color: #f2f2f2;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 18px; /* Arredondado moderno */
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-acao:hover {
+    background-color: #e5e5e5; /* Efeito ao passar o mouse */
+}
+
+/* Botão Vermelho de Inscrição */
+.btn-inscrever {
+    background-color: #cc0000; /* Vermelho YouTube */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-inscrever:hover {
+    background-color: #990000; /* Vermelho mais escuro no hover */
+}
+
+/* --- SEÇÃO DE COMENTÁRIOS E MINIATURAS --- */
+.secao-comentarios {
+    margin-top: 24px;
+}
+
+.comentario {
+    margin-bottom: 20px;
+}
+
+.autor {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.coluna-miniaturas {
+    flex: 1;
+}
+
+.card-miniatura {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+
+.card-miniatura img {
+    width: 160px;
+    height: 90px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.card-miniatura p {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 900px) {
+    .container-principal {
+        flex-direction: column;
+    }
+    
+    .pesquisa-container {
+        display: none;
+    }
+
+    /* Ajuste para celular: Flexbox */
+    .barra-acoes-video {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+}
